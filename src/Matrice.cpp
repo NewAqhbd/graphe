@@ -28,6 +28,22 @@ Matrice::~Matrice()
     delete[] tab;
 }
 
+Matrice Matrice::IdentityMatrix(int _size)
+{
+    Matrice m = Matrice(_size);
+
+        for (int i = 0; i < _size; i++)
+    {
+        for (int j = 0; j < _size; j++)
+        {
+            if (i == j)
+                m.setElement(i, j, 1);
+        }
+    }
+
+    return m;
+}
+
 void Matrice::display()
 {
     std::cout << "Matrice: " << std::endl;
@@ -39,6 +55,11 @@ void Matrice::display()
         }
         std::cout << "" << std::endl;
     }
+}
+
+void Matrice::getRelatedComponent()
+{
+
 }
 
 int Matrice::getElement(int x, int y)

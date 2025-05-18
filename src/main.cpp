@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     
-    Matrice m = Matrice(5);
+    Matrice m = Matrice::IdentityMatrix(5);
     m.display();
     return 0;
 }
