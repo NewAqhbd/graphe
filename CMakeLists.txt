@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(projet
     src/main.cpp
-    src/matrice.cpp
+    src/matrix.cpp
 )
 
 include_directories(include)

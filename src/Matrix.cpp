@@ -32,7 +32,7 @@ Matrix Matrix::IdentityMatrix(int _size)
 {
     Matrix m = Matrix(_size);
 
-        for (int i = 0; i < _size; i++)
+    for (int i = 0; i < _size; i++)
     {
         for (int j = 0; j < _size; j++)
         {
@@ -57,9 +57,13 @@ void Matrix::display()
     }
 }
 
-void Matrix::getRelatedComponent()
+Matrix Matrix::matrixMultiply(Matrix A, Matrix B)
 {
 
+}
+
+void Matrix::getRelatedComponent()
+{
 }
 
 int Matrix::getElement(int x, int y)
@@ -71,7 +75,6 @@ int Matrix::getElement(int x, int y)
         std::cout << "Coordonne invalide" << std::endl;
         return -1;
     }
-
 }
 
 void Matrix::setElement(int x, int y, int val)
