@@ -46,7 +46,11 @@ int Matrice::getElement(int x, int y)
     if (x < size && y < size)
         return tab[x][y];
     else
+    {
+        std::cout << "Coordonne invalide" << std::endl;
         return -1;
+    }
+
 }
 
 void Matrice::setElement(int x, int y, int val)
