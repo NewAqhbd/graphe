@@ -10,4 +10,3 @@ add_executable(projet
 
 target_compile_options(projet PRIVATE -Wall -Wextra -Wpedantic)
 
-find_package(Threads REQUIRED)
