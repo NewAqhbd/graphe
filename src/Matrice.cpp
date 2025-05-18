@@ -30,7 +30,7 @@ Matrice::~Matrice()
 
 void Matrice::display()
 {
-    std::cout <<"Matrice: " << std::endl;
+    std::cout << "Matrice: " << std::endl;
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
@@ -39,4 +39,18 @@ void Matrice::display()
         }
         std::cout << "" << std::endl;
     }
+}
+
+int Matrice::getElement(int x, int y)
+{
+    if (x < size && y < size)
+        return tab[x][y];
+    else
+        return -1;
+}
+
+void Matrice::setElement(int x, int y, int val)
+{
+    if (x < size && y < size)
+        tab[x][y] = val;
 }
