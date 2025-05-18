@@ -3,17 +3,40 @@
 
 #include "Matrice.hpp"
 
-Matrice::Matrice(int _taille){
-    taille = _taille;
-    grille = new int* [taille];
-    for (int i = 0; i < taille-1; i++){
-        grille[i] = new int [taille];
+Matrice::Matrice(int _size)
+{
+    size = _size;
+    tab = new int *[size];
+    for (int id = 0; id < size; id++)
+        tab[id] = new int[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            tab[i][j] = 0;
+        }
     }
 }
 
-Matrice::~Matrice(){
-    for (int i = 0; i < taille-1; i++){
-       delete[] grille[i];
+Matrice::~Matrice()
+{
+    for (int id = 0; id < size - 1; id++)
+    {
+        delete[] tab[id];
     }
-    delete[] grille;
+    delete[] tab;
+}
+
+void Matrice::display()
+{
+    std::cout <<"Matrice: " << std::endl;
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            std::cout << tab[i][j];
+        }
+        std::cout << "" << std::endl;
+    }
 }

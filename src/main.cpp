@@ -1,11 +1,11 @@
 #include <iostream>
-#include <list>
+#include "Matrice.hpp"
 
 using namespace std;
 
 int main(){
     
-    cout << "Hello world !" << endl;
-
+    Matrice m = Matrice(5);
+    m.display();
     return 0;
 }

@@ -4,10 +4,11 @@
 class Matrice
 {
 private:
-    int taille;
-    int** grille ;
+    int size;
+    int** tab ;
 
 public:
-    Matrice(int _taille);
+    Matrice(int _size);
     ~Matrice();
+    void display();
 };
