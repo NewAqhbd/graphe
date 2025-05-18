@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/valen/Documents/Licence/L3/semestre_6/Graphe/graphe/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -Wextra -Wpedantic -o CMakeFiles\\projet.dir\\src\\main.cpp.obj -c C:\\Users\\valen\\Documents\\Licence\\L3\\semestre_6\\Graphe\\graphe\\src\\main.cpp",
-  "file": "C:/Users/valen/Documents/Licence/L3/semestre_6/Graphe/graphe/src/main.cpp",
-  "output": "CMakeFiles/projet.dir/src/main.cpp.obj"
-}
-]
