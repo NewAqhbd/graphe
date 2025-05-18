@@ -1,9 +1,9 @@
 #include <iostream>
 #include <list>
 
-#include "Matrice.hpp"
+#include "Matrix.hpp"
 
-Matrice::Matrice(int _size)
+Matrix::Matrix(int _size)
 {
     size = _size;
     tab = new int *[size];
@@ -19,7 +19,7 @@ Matrice::Matrice(int _size)
     }
 }
 
-Matrice::~Matrice()
+Matrix::~Matrix()
 {
     for (int id = 0; id < size - 1; id++)
     {
@@ -28,9 +28,9 @@ Matrice::~Matrice()
     delete[] tab;
 }
 
-Matrice Matrice::IdentityMatrix(int _size)
+Matrix Matrix::IdentityMatrix(int _size)
 {
-    Matrice m = Matrice(_size);
+    Matrix m = Matrix(_size);
 
         for (int i = 0; i < _size; i++)
     {
@@ -44,9 +44,9 @@ Matrice Matrice::IdentityMatrix(int _size)
     return m;
 }
 
-void Matrice::display()
+void Matrix::display()
 {
-    std::cout << "Matrice: " << std::endl;
+    std::cout << "Matrix: " << std::endl;
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
@@ -57,12 +57,12 @@ void Matrice::display()
     }
 }
 
-void Matrice::getRelatedComponent()
+void Matrix::getRelatedComponent()
 {
 
 }
 
-int Matrice::getElement(int x, int y)
+int Matrix::getElement(int x, int y)
 {
     if (x < size && y < size)
         return tab[x][y];
@@ -74,7 +74,7 @@ int Matrice::getElement(int x, int y)
 
 }
 
-void Matrice::setElement(int x, int y, int val)
+void Matrix::setElement(int x, int y, int val)
 {
     if (x < size && y < size)
         tab[x][y] = val;

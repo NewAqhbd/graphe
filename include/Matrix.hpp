@@ -1,20 +1,20 @@
 #include <iostream>
 #include <list>
 
-class Matrice
+class Matrix
 {
 private:
     int size;
     int** tab ;
 
 public:
-    Matrice(int _size);
-    ~Matrice();
+    Matrix(int _size);
+    ~Matrix();
 
-    // Renvoit une matrice identité en fonction de la taille passé en parametre.
-    static Matrice IdentityMatrix(int _size);
+    // Renvoit une Matrix identité en fonction de la taille passé en parametre.
+    static Matrix IdentityMatrix(int _size);
 
-    //Affiche la Matrice:
+    //Affiche la Matrix:
     void display();
 
     //Affiche et renvoit les composantes connexes.
