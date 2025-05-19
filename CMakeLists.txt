@@ -8,6 +8,7 @@ add_executable(projet
     src/main.cpp
     src/matrix.cpp
     src/Dijkstra.cpp
+    src/Coloration.cpp
 )
 
 include_directories(include)

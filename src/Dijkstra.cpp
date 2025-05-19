@@ -1,7 +1,6 @@
-#include <iostream>
-#include <vector>
 #include <limits>
 #include <fstream>
+#include <iostream>
 
 #include "Dijkstra.hpp"
 
@@ -87,7 +86,7 @@ int main_dijkstra()
 {
     // Le programme se trouve par défaut dans le répertoire build,
     // donc on remonte d'un niveau pour accéder au fichier matrice.txt
-    string filename = "../matrice.txt";
+    string filename = "../matrice_dijkstra.txt";
 
     ifstream file(filename);
     if (!file.is_open())
