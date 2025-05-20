@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Matrix.hpp"
+#include "Dijkstra.hpp"
+#include "Coloration.hpp"
 
 using namespace std;
 
@@ -50,5 +52,14 @@ int main(){
 
     std::cout << std::endl;
 
+    cout << "\n" << endl;
+
+    main_dijkstra();
+    cout << "\n" << endl;
+
+    main_coloration();
+    cout << "\n" << endl;
+
+    
     return 0;
 }

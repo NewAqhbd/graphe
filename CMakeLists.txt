@@ -7,6 +7,8 @@ set(CMAKE_C_STANDARD 11)
 add_executable(projet
     src/main.cpp
     src/matrix.cpp
+    src/Dijkstra.cpp
+    src/Coloration.cpp
 )
 
 include_directories(include)
