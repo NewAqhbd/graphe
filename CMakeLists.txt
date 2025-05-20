@@ -11,5 +11,5 @@ add_executable(projet
 
 include_directories(include)
 
-target_compile_options(projet PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(projet PRIVATE -Wall -Wno-long-long -fPIC)
 
