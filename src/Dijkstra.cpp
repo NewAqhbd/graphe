@@ -11,14 +11,14 @@ const int INF = numeric_limits<int>::max(); // Permet d'obtenir la valeur maxima
 
 
 // Trouve le sommet de distance minimal entre les différents sommets à traiter
-int trouver_distance_min(const vector<int>& min_distances, const vector<bool>& is_to_process)
+int trouver_distance_min(const vector<int>& min_distances, const vector<bool>& a_traiter)
 {
     int minimum_distance = INF;
     int sommet = -1;
 
     for (size_t i = 0; i < min_distances.size(); i++)
     {
-        if (is_to_process[i] && min_distances[i] < minimum_distance)
+        if (a_traiter[i] && min_distances[i] < minimum_distance)
         {
             minimum_distance = min_distances[i];
             sommet = i;
@@ -37,17 +37,17 @@ void Dijkstra(const vector<vector<int>>& graphe, int sommet_debut, vector<int>& 
     min_distances.assign(N, INF);
     
     predecesseurs.assign(N, -1); // Initialisation de la liste des prédecesseurs
-    vector<bool> is_to_process(N, true);
+    vector<bool> a_traiter(N, true);
 
     min_distances[sommet_debut] = 0;
 
     while (true)
     {
-        int sommet1 = trouver_distance_min(min_distances, is_to_process);
+        int sommet1 = trouver_distance_min(min_distances, a_traiter);
         if (sommet1 == -1) break; // Plus aucun sommet accessible
-        is_to_process[sommet1] = false;
+        a_traiter[sommet1] = false;
 
-        for (int sommet2 = 0; sommet2 < N; ++sommet2)
+        for (int sommet2 = 0; sommet2 < N; sommet2++)
         {
             if (graphe[sommet1][sommet2] > 0) // Si le sommet2 est voisin du sommet1
             {
@@ -99,7 +99,7 @@ int main_dijkstra()
     int N;
     file >> N;
 
-    // Lecture de la matrice
+    // Lecture de la matrice et initialisation du graphe en attribuant les poids des chemins
     vector<vector<int>> graphe(N, vector<int>(N));
     for (int i = 0; i < N; i++)
     {
@@ -117,8 +117,9 @@ int main_dijkstra()
     cin >> sommet_fin;
 
     // Vérification des entrées
-    if (sommet_debut < 0 || sommet_debut >= N || sommet_fin < 0 || sommet_fin >= N) {
-        cerr << "Erreur: Sommets invalides" << endl;
+    if (sommet_debut < 0 || sommet_debut >= N || sommet_fin < 0 || sommet_fin >= N)
+    {
+        cerr << "Sommets invalides" << endl;
         return -1;
     }
 

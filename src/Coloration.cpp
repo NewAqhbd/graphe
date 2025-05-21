@@ -9,14 +9,7 @@ using namespace std;
 
 
 
-// Fonction de comparaison pour trier par degré décroissant
-bool comparerParDegre(const Sommet& sommet1, const Sommet& sommet2)
-{
-    return sommet1.degre > sommet2.degre;
-}
-
-
-
+// Fonction pour trier les sommets par degré décroissant
 void trierParDegre(vector<Sommet>& sommets)
 {
     int n = sommets.size();
@@ -37,7 +30,7 @@ void trierParDegre(vector<Sommet>& sommets)
 
 
 
-// Fonction Welsh-Powell
+// Fonction de Welsh Powell
 void welshPowell(const vector<vector<int>>& graphe)
 {
     int n = graphe.size();
@@ -81,7 +74,7 @@ void welshPowell(const vector<vector<int>>& graphe)
                 {
                     bool peut_colorier = true;
 
-                    // Vérifier si le sommet_a_colorier est adjacent à sommet_vierge
+                    // Vérifier si sommet_a_colorier est adjacent à sommet_vierge
                     for (int k = 0; k < n; ++k)
                     {
                         if (graphe[sommet_a_colorier][k] && couleurs[k] == couleur_actuelle)
@@ -136,15 +129,6 @@ int main_coloration()
             file >> graphe[i][j];
         }
     }
-
-/*     // Exemple de graphe (matrice d'adjacence)
-    vector<vector<int>> graphe = {
-        {0, 1, 1, 0, 0},
-        {1, 0, 1, 1, 0},
-        {1, 1, 0, 0, 1},
-        {0, 1, 0, 0, 1},
-        {0, 0, 1, 1, 0}
-    }; */
 
     welshPowell(graphe);
 

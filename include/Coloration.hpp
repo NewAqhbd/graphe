@@ -6,8 +6,6 @@ typedef struct Sommet {
     int degre;
 } Sommet;
 
-bool comparerParDegre(const Sommet& a, const Sommet& b);
-
 void trierParDegre(vector<Sommet>& sommets);
 
 void welshPowell(const vector<vector<int>>& graphe);
