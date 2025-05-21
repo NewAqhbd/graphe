@@ -47,11 +47,6 @@ int main(){
 
     std::cout << std::endl;
 
-    tmp = Matrix::getRelatedComponent(m);
-    tmp.display();
-
-    std::cout << std::endl;
-
     cout << "\n" << endl;
 
     main_dijkstra();
